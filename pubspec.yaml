@@ -1,0 +1,30 @@
+name: fakesgps
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  location: ^5.0.3  # Mantén la versión más reciente de location
+  cupertino_icons: ^1.0.6
+  collection: ^1.18.0  # Mantén la versión compatible con flutter_test
+  http_parser: ^4.0.2  # Usa la versión compatible con collection 1.18.0
+  js: ^0.6.7  # Baja la versión para ser compatible con location_web
+  meta: ^1.15.0  # Mantén la versión compatible con flutter_test
+  material_color_utilities: ^0.11.1  # Mantén la versión compatible con flutter_test
+  android_intent_plus: ^5.1.0
+  logger: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.2
+
+
+flutter:
+  uses-material-design: true

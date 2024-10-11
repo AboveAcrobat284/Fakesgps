@@ -1,0 +1,41 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.fakesgps"
+    compileSdkVersion 34  // Asegúrate de que compileSdkVersion sea correcto
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.fakesgps"
+        minSdkVersion 21  // Ajusta según tus necesidades
+        targetSdkVersion 34  // Asegúrate de que sea compatible con el SDK de tu proyecto
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            // Usa una firma para las compilaciones de release si es necesario, de lo contrario, mantén la firma de debug
+            signingConfig signingConfigs.debug  // Asegúrate de definir una configuración de firma si es necesario
+            // Esto asegura que la versión de release pueda ser ejecutada
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
